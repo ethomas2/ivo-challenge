@@ -1,0 +1,29 @@
+{
+  "name": "@ivo/obstacle-course",
+  "version": "1.0.0",
+  "description": "LLM obstacle course",
+  "scripts": {
+    "play": "node --no-node-snapshot --max-old-space-size=8192 main.js",
+    "test": "jest",
+    "export": "./export.sh",
+    "reset": "./reset_answers.sh"
+  },
+  "author": "Latch",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "glob": "^13.0.0",
+    "isolated-vm": "^6.0.2",
+    "openai": "^6.9.1",
+    "ts-morph": "^27.0.2",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["isolated-vm"]
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5"
+  }
+}
