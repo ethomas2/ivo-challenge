@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "LLM obstacle course",
   "scripts": {
-    "play": "node --no-node-snapshot --max-old-space-size=8192 main.js",
+    "play": "node --no-node-snapshot --max-old-space-size=8192 --experimental-sqlite main.js",
     "test": "jest",
     "export": "./export.sh",
     "reset": "./reset_answers.sh"
@@ -11,12 +11,14 @@
   "author": "Latch",
   "license": "ISC",
   "dependencies": {
+    "diff": "^5.2.0",
     "dotenv": "^17.2.3",
     "glob": "^13.0.0",
     "isolated-vm": "^6.0.2",
     "openai": "^6.9.1",
     "ts-morph": "^27.0.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^3.23.8"
   },
   "pnpm": {
     "onlyBuiltDependencies": ["isolated-vm"]
